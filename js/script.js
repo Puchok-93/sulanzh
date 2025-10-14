@@ -84,8 +84,14 @@ function initHeaderState() {
             headerBlock.classList.add('js-active');
         } else {
             headerBlock.classList.remove('js-active');
-            headerSubNav?.classList.remove('js-active');
+            headerSubNav.classList.remove('js-active');
         }
+    };
+
+	const handleDesktopMenu = () => {
+        if (!headerSubNav) return;
+        headerSubNav.classList.toggle('js-active');
+        document.body.classList.toggle('no-scroll', headerSubNav.classList.contains('js-active'));
     };
 
     const handleMobileMenu = () => {
@@ -96,34 +102,30 @@ function initHeaderState() {
         document.body.classList.toggle('no-scroll', headerContent.classList.contains('js-active'));
     };
 
-    const handleDesktopMenu = () => {
-        if (!headerSubNav) return;
-        headerSubNav.classList.toggle('js-active');
-        document.body.classList.toggle('no-scroll', headerSubNav.classList.contains('js-active'));
-    };
-
-    const closeDesktopMenu = () => {
-        headerSubNav?.classList.remove('js-active');
-        document.body.classList.remove('no-scroll');
-    };
-
-    const setupHandlers = () => {
-        headerNavBtn.replaceWith(headerNavBtn.cloneNode(true));
-        const newHeaderNavBtn = document.querySelector('.header-nav__btn');
-        if (!newHeaderNavBtn) return;
-
-        if (window.matchMedia('(max-width: 767px)').matches) {
-            newHeaderNavBtn.addEventListener('click', handleMobileMenu);
-        } else {
-            newHeaderNavBtn.addEventListener('click', handleDesktopMenu);
-            headerSubNavCloseBtn?.addEventListener('click', closeDesktopMenu);
-        }
-    };
+	if(window.innerWidth > 1024) {
+		headerNavBtn.addEventListener('click', handleDesktopMenu);
+		headerSubNavCloseBtn.addEventListener('click', handleDesktopMenu);
+	} else if(window.innerWidth < 768) {
+		headerNavBtn.addEventListener('click', handleMobileMenu);
+	}
 
     window.addEventListener('scroll', handleScroll);
-    setupHandlers();
 
-    window.addEventListener('resize', setupHandlers);
+	window.addEventListener('resize', () => {
+		if(window.innerWidth > 1024) {
+			headerNavBtn.addEventListener('click', handleDesktopMenu);
+			headerSubNavCloseBtn.addEventListener('click', handleDesktopMenu);
+			console.log('Деск обработчики установленаы');
+			headerNavBtn.classList.remove('js-open');
+			headerContent.classList.remove('js-active');
+		} else {
+			headerNavBtn.removeEventListener('click', handleDesktopMenu);
+			headerSubNavCloseBtn.removeEventListener('click', handleDesktopMenu);
+			console.log('Деск обработчики удалены')
+			headerNavBtn.classList.remove('js-open');
+			headerContent.classList.remove('js-active');
+		}
+	})
 }
 
 function initApp() {

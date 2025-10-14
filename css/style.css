@@ -1917,6 +1917,7 @@ textarea {
     /* Header Nav */
 
     .header-nav-list {
+        max-height: 169px;
         opacity: 0;
         transition: opacity 0.3s 0s linear;
         padding: 62px 0 0;
