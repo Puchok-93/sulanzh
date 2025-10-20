@@ -184,7 +184,8 @@
 .show-more-news-btn:hover,
 .show-more-news-btn:focus {
     color: #ffffff;
-    background-color: #D5DAE9;
+    background-color: #000000;
+    border-color: #000000;
 }
 
 @media(max-width: 1600px) {
