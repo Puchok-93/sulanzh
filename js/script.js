@@ -79,6 +79,8 @@ function initHeaderState() {
 
     if (!headerBlock || !headerNavBtn) return;
 
+	console.log(headerBlock.offsetWidth)
+
     const handleScroll = () => {
         if (window.scrollY > 0 && window.innerWidth > 1024) {
             headerBlock.classList.add('js-active');
@@ -115,13 +117,11 @@ function initHeaderState() {
 		if(window.innerWidth > 1024) {
 			headerNavBtn.addEventListener('click', handleDesktopMenu);
 			headerSubNavCloseBtn.addEventListener('click', handleDesktopMenu);
-			console.log('Деск обработчики установленаы');
 			headerNavBtn.classList.remove('js-open');
 			headerContent.classList.remove('js-active');
 		} else {
 			headerNavBtn.removeEventListener('click', handleDesktopMenu);
 			headerSubNavCloseBtn.removeEventListener('click', handleDesktopMenu);
-			console.log('Деск обработчики удалены')
 			headerNavBtn.classList.remove('js-open');
 			headerContent.classList.remove('js-active');
 		}
