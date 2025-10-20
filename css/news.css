@@ -14,6 +14,10 @@
     padding: 0 10px;
 }
 
+.wrapper--news {
+    padding: 0 10px;
+}
+
 .page-news-title {
     font-size: 131px;
     line-height: 1;
@@ -193,6 +197,10 @@
         padding: 0 10px;
     }
 
+    .wrapper--news {
+        padding: 0 65px;
+    }
+
     .page-news-title {
         font-size: 109px;
     }
@@ -271,6 +279,10 @@
         padding: 0 83px;
     }
 
+    .wrapper--news {
+        padding: 0 50px;
+    }
+
     .news-by-year-list {
         padding: 68px 12px 62px;
     }
@@ -336,6 +348,10 @@
         padding: 0 20px;
     }
 
+    .wrapper--news {
+        padding: 0 20px;
+    }
+
     /* NewsByYear */
 
     .news-by-year-list {
@@ -386,6 +402,11 @@
     .news .wrapper {
         padding: 0 10px;
     }
+
+    .wrapper--news {
+        padding: 0 10px;
+    }
+    
      /* NewsByYear */
     .news-by-year-list {
         overflow-x: scroll;

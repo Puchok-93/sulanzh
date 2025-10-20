@@ -10,32 +10,102 @@
 </head>
 
 <body>
-	<header style="display: none" class="header">
-		<div class="container">
+	<header class="header">
+		<div class="wrapper wrapper--news">
 			<div class="header-block">
 				<a href="#" class="header-logo">
-					<img src="img/header/logo.svg" alt="Логотип">
+					<img src="../img/header/logo.svg" alt="Логотип">
 				</a>
-
 				<div class="header-nav">
 					<button type="button" class="header-nav__btn">
 						<span class="line"></span>
 						<span class="line"></span>
 						<span class="line"></span>
 					</button>
-					<ul class="header-nav-list">
-						<li class="header-nav-list__item">
-							<a class="header-nav-list__link" href="##">О компании</a>
-						</li>
-						<li class="header-nav-list__item">
-							<a class="header-nav-list__link" href="##">Новости</a>
-						</li>
-						<li class="header-nav-list__item">
-							<a class="header-nav-list__link" href="##">Контакты</a>
-						</li>
-					</ul>
+					<div class="header-content">
+						<!-- Навигация -->
+						<ul class="header-nav-list">
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">О компании</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Новости</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Контакты</a>
+							</li>
+						</ul>
+						<!-- Адрес -->
+						<div class="header-address">
+							<svg class="header-address__logo" viewBox="0 0 42 42">
+								<use xlink:href="img/sprite.svg#logo-small"></use>
+							</svg>
+							<address class="header-address__address">Республика Крым,<br>г. Белогорск, а/я № 5</address>
+						</div>
+						<!-- Social -->
+						<ul class="header-social-list">
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 29 24">
+										<use xlink:href="img/sprite.svg#icon-tg"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 26 17">
+										<use xlink:href="img/sprite.svg#icon-vk"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 26 24">
+										<use xlink:href="img/sprite.svg#icon-rutube"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 28 28">
+										<use xlink:href="img/sprite.svg#icon-youtube"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 31 31">
+										<use xlink:href="img/sprite.svg#icon-dzen"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<!-- Маршрут -->
+						<button class="header-route-btn" type="button">
+							<span class="header-route-btn__text">Проложить паршрут</span>
+							<svg class="header-route-btn__icon" viewBox="0 0 25 25">
+								<use xlink:href="img/sprite.svg#icon-route"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="header-sub-nav">
+						<ul class="header-nav-list">
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">О компании</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Новости</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Контакты</a>
+							</li>
+						</ul>
+						<button type="button" class="header-sub-nav__close-btn">
+							<span class="line"></span>
+							<span class="line"></span>
+						</button>
+					</div>
 				</div>
-
 				<div class="header-contact">
 					<a href="tel:+74954457777" class="header-contact__phone phone">+7 (495) 445-77-77</a>
 				</div>
@@ -206,7 +276,7 @@
 		</div>
 	</footer>
 
-	<script src="js/script.js"></script>
+	<script src="../js/script.js"></script>
 </body>
 
 </html>
