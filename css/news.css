@@ -199,7 +199,8 @@
     }
 
     .wrapper--news {
-        padding: 0 65px;
+        max-width: 1489px;
+        padding: 0 10px;
     }
 
     .page-news-title {
@@ -281,7 +282,7 @@
     }
 
     .wrapper--news {
-        padding: 0 50px;
+        padding: 0 83px;
     }
 
     .news-by-year-list {
