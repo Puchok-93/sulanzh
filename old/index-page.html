@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Суланж</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<div class="header-block">
+				<a href="#" class="header-logo">
+					<img src="img/header/logo.svg" alt="Логотип">
+				</a>
+				<div class="header-nav">
+					<button type="button" class="header-nav__btn">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</button>
+					<div class="header-content">
+						<!-- Навигация -->
+						<ul class="header-nav-list">
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">О компании</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Новости</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Контакты</a>
+							</li>
+						</ul>
+						<!-- Адрес -->
+						<div class="header-address">
+							<svg class="header-address__logo" viewBox="0 0 42 42">
+								<use xlink:href="img/sprite.svg#logo-small"></use>
+							</svg>
+							<address class="header-address__address">Республика Крым,<br>г. Белогорск, а/я № 5</address>
+						</div>
+						<!-- Social -->
+						<ul class="header-social-list">
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 29 24">
+										<use xlink:href="img/sprite.svg#icon-tg"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 26 17">
+										<use xlink:href="img/sprite.svg#icon-vk"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 26 24">
+										<use xlink:href="img/sprite.svg#icon-rutube"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 28 28">
+										<use xlink:href="img/sprite.svg#icon-youtube"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-social">
+								<a href="#" class="header-social__link">
+									<svg class="header-social__icon" viewBox="0 0 31 31">
+										<use xlink:href="img/sprite.svg#icon-dzen"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<!-- Маршрут -->
+						<button class="header-route-btn" type="button">
+							<span class="header-route-btn__text">Проложить паршрут</span>
+							<svg class="header-route-btn__icon" viewBox="0 0 25 25">
+								<use xlink:href="img/sprite.svg#icon-route"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="header-sub-nav">
+						<ul class="header-nav-list">
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">О компании</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Новости</a>
+							</li>
+							<li class="header-nav-list__item">
+								<a class="header-nav-list__link" href="##">Контакты</a>
+							</li>
+						</ul>
+						<button type="button" class="header-sub-nav__close-btn">
+							<span class="line"></span>
+							<span class="line"></span>
+						</button>
+					</div>
+				</div>
+				<div class="header-contact">
+					<a href="tel:+74954457777" class="header-contact__phone phone">+7 (495) 445-77-77</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main style="overflow: hidden;">
+
+		<div class="navigation-links">
+			<div class="nav-indicator"></div>
+			<div class="navigation-item">
+				<div class="navigation-item__link">
+					<a href="#vehicle-park">Парк спецтехники</a>
+				</div>
+			</div>
+
+			<div class="navigation-item">
+				<div class="navigation-item__link">
+					<a href="#sales-office">Офис продаж</a>
+				</div>
+			</div>
+
+			<div class="navigation-item">
+				<div class="navigation-item__link">
+					<a href="#why-choose-us">Преимущества</a>
+				</div>
+			</div>
+
+			<div class="navigation-item active">
+				<div class="navigation-item__link">
+					<a href="#home-screen">О компании</a>
+				</div>
+			</div>
+		</div>
+
+		<section class="home-screen section" id="home-screen">
+			<div class="section__scale">
+				<div class="container">
+					<div class="home-screen__block">
+						<div class="home-screen-content">
+							<h1 class="home-screen-content__title title">Суланж</h1>
+							<p class="home-screen-content__subtitle">Питомник растений</p>
+							<div class="home-screen-content__text text">
+								<p>
+									Самый большой в России проект по производству посадочного материала.
+									Мы будем выращивать и поставлять большой ассортимент растений внутри страны
+									и уменьшим зависимость российских производителей от импорта в этой сфере.
+								</p>
+							</div>
+							<div class="home-screen-content__buttons">
+								<a href="##" class="btn-1">О компании</a>
+							</div>
+
+							<div class="home-screen-content-mob-image">
+								<div class="home-screen-content-mob-image__info">
+									<div class="home-screen-content-mob-image__info-icon">
+										<div class="icon">
+											<svg width="100%" height="100%" viewBox="0 0 15 14" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M10.5932 6.26186H8.81287V2.11356C8.81287 1.14562 8.28857 0.949732 7.64904 1.67568L7.18812 2.19998L3.28756 6.63636C2.75174 7.24132 2.97644 7.73682 3.78306 7.73682H5.56337V11.8851C5.56337 12.8531 6.08767 13.049 6.7272 12.323L7.18812 11.7987L11.0887 7.36232C11.6245 6.75736 11.3998 6.26186 10.5932 6.26186Z"
+													fill="white" />
+											</svg>
+										</div>
+									</div>
+									<p class="home-screen-content-mob-image__info-text">Откроемся<br> в апреле 2026</p>
+								</div>
+
+								<button class="home-screen-content-mob-image__button-video">
+									<svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<ellipse cx="19.2806" cy="19.4909" rx="18.6087" ry="18.5494" fill="#F04C23" />
+										<path d="M15.6777 26.819V12.1665L25.0603 19.4156L15.6777 26.819Z" fill="white" />
+									</svg>
+								</button>
+
+								<div id="svgWrapper-main-mob" class="svg-container-main-mob">
+									<svg id="photoSVG-main-mob" viewBox="0 0 959 957" xmlns="http://www.w3.org/2000/svg">
+										<defs>
+											<mask id="mask0_1761_531" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+												width="284" height="285">
+												<path d="M141.48 0.939941L0 142.508V284.423H142.52L284 143.028V0.939941H141.48Z"
+													fill="#DCDEE5" />
+											</mask>
+										</defs>
+
+										<image id="svg-container-main-mob-photoImage" href="img/home-screen/Image.jpg"
+											preserveAspectRatio="xMidYMid slice" mask="url(#mask0_1761_531)" width="284" height="284" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="home-screen-numbers">
+							<p class="home-screen-numbers-mob-title">Почему нас<br> выбирают</p>
+							<div class="home-screen-numbers__items">
+								<div class="home-screen-numbers-item">
+									<div class="home-screen-numbers-item__number">
+										<span class="number">700<sup>Га</sup></span>
+									</div>
+									<div class="home-screen-numbers-item__text text">
+										<p>
+											площадь<br> осваиваемых земель
+										</p>
+									</div>
+								</div>
+
+								<div class="home-screen-numbers-item">
+									<div class="home-screen-numbers-item__number">
+										<span class="number">10<sup>Га</sup></span>
+									</div>
+									<div class="home-screen-numbers-item__text text">
+										<p>
+											контейнерная<br> площадка
+										</p>
+									</div>
+								</div>
+
+								<div class="home-screen-numbers-item">
+									<div class="home-screen-numbers-item__number">
+										<span class="number">300</span>
+									</div>
+									<div class="home-screen-numbers-item__text text">
+										<p>
+											квалифицированных<br> специалистов
+										</p>
+									</div>
+								</div>
+
+								<div class="home-screen-numbers-item">
+									<div class="home-screen-numbers-item__number">
+										<span class="number">127</span>
+									</div>
+									<div class="home-screen-numbers-item__text text">
+										<p>
+											квалифицированных специалистов
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="home-screen-grass">
+							<div class="box">
+								<img src="img/home-screen/grass.png" alt="Изображение">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="why-choose-us section active-main why-choose-us" id="why-choose-us">
+			<div class="section__scale">
+				<div class="container">
+					<div class="why-choose-us__block">
+						<div class="why-choose-us__advantages">
+							<h2 class="why-choose-us__title section-title">
+								Почему нас выбирают
+							</h2>
+							<div class="why-choose-us__advantages-block">
+								<div class="why-choose-us-advantage">
+									<div class="why-choose-us-advantage__icon">
+										<div class="icon">
+											<img src="img/why-choose-us/icon-1.svg" alt="Иконка">
+										</div>
+									</div>
+									<div class="why-choose-us-advantage__info">
+										<p class="why-choose-us-advantage__title">Надёжность</p>
+										<p class="why-choose-us-advantage__text">крупнейший производитель<br> в России.</p>
+									</div>
+								</div>
+								<div class="why-choose-us-advantage">
+									<div class="why-choose-us-advantage__icon">
+										<div class="icon">
+											<img src="img/why-choose-us/icon-2.svg" alt="Иконка">
+										</div>
+									</div>
+									<div class="why-choose-us-advantage__info">
+										<p class="why-choose-us-advantage__title">Качество</p>
+										<p class="why-choose-us-advantage__text">соответствие мировым<br> стандартам</p>
+									</div>
+								</div>
+								<div class="why-choose-us-advantage">
+									<div class="why-choose-us-advantage__icon">
+										<div class="icon">
+											<img src="img/why-choose-us/icon-3.svg" alt="Иконка">
+										</div>
+									</div>
+									<div class="why-choose-us-advantage__info">
+										<p class="why-choose-us-advantage__title">Инновации</p>
+										<p class="why-choose-us-advantage__text">передовые технологии<br> выращивания.</p>
+									</div>
+								</div>
+								<div class="why-choose-us-advantage">
+									<div class="why-choose-us-advantage__icon">
+										<div class="icon">
+											<img src="img/why-choose-us/icon-4.svg" alt="Иконка">
+										</div>
+									</div>
+									<div class="why-choose-us-advantage__info">
+										<p class="why-choose-us-advantage__title">Сервис</p>
+										<p class="why-choose-us-advantage__text">индивидуальный подход<br>
+											к каждому клиенту</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="why-choose-us__advantages-two--wrapper">
+							<div class="why-choose-us__advantages-two--items accordion">
+								<div class="why-choose-us__advantage-two advantage-two-1 accordion__item accordion__item_show">
+
+									<div class="why-choose-us__video-popup">
+										<div class="why-choose-us__video">
+											<div class="why-choose-us__video-block">
+												<div class="why-choose-us__video-block-wrapper">
+													<video class="why-choose-us__video-block-wrapper-video" id="fon-popup">
+														<source src="files/video/1108227_1080p_Pines_Valley_1280x720.mp4" type="video/mp4">
+													</video>
+													<div class="btn-stop-popup">
+														<div class="btn-stop-popup__button">
+															<svg width="90" height="90" viewBox="0 0 90 90" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<circle cx="45" cy="45" r="45" fill="#F04C23" />
+																<path d="M38 28V62.5H28V28H38Z" fill="white" />
+																<path d="M61.5 28V62.5H51.5V28H61.5Z" fill="white" />
+															</svg>
+														</div>
+													</div>
+
+													<div class="btn-ok-popup">
+														<div class="btn-stop-popup__button">
+															<svg width="90" height="90" viewBox="0 0 90 90" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<circle cx="45" cy="45" r="45" fill="#F04C23" />
+																<path d="M36.3008 62.7728V27.2266L58.9899 44.8126L36.3008 62.7728Z" fill="white" />
+															</svg>
+														</div>
+													</div>
+
+													<div class="popup-video-close">
+														<svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<rect width="30" height="30" rx="15" fill="black" fill-opacity="0.9" />
+															<path d="M8 8L22.5563 22.5563" stroke="white" stroke-width="1.40039" />
+															<path d="M8 22.0371L22.0358 8.00135" stroke="white" stroke-width="1.40039" />
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="figureWrapper1" class="figure-container figure-container1 accordion__header">
+										<div class="figure">
+											<div class="figure-block" style="background-image: url(img/home-screen/Image.jpg);">
+												<div class="why-choose-us__info">
+													<div class="why-choose-us__info-icon">
+														<div class="icon">
+															<svg width="100%" height="100%" viewBox="0 0 15 14" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.5932 6.26186H8.81287V2.11356C8.81287 1.14562 8.28857 0.949732 7.64904 1.67568L7.18812 2.19998L3.28756 6.63636C2.75174 7.24132 2.97644 7.73682 3.78306 7.73682H5.56337V11.8851C5.56337 12.8531 6.08767 13.049 6.7272 12.323L7.18812 11.7987L11.0887 7.36232C11.6245 6.75736 11.3998 6.26186 10.5932 6.26186Z"
+																	fill="white" />
+															</svg>
+														</div>
+													</div>
+													<p class="why-choose-us__info-text">Откроемся в апреле 2026</p>
+												</div>
+
+												<button class="why-choose-us__button-video button-video-popup-open">
+													<svg width="38" height="39" viewBox="0 0 38 39" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<ellipse cx="19.2806" cy="19.4909" rx="18.6087" ry="18.5494" fill="#F04C23" />
+														<path d="M15.6777 26.819V12.1665L25.0603 19.4156L15.6777 26.819Z" fill="white" />
+													</svg>
+												</button>
+
+											</div>
+										</div>
+									</div>
+
+									<div class="advantage-two-content accordion__body">
+										<div class="accordion__content">
+											<p class="advantage-two-content__title">
+												Высокий уровень сервиса для посетителей
+											</p>
+											<p class="advantage-two-content__text">
+												Консультации по подбору растений. Доставка
+												по всей России и гарантия
+												на посадочный материал.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="why-choose-us__advantage-two advantage-two-2 accordion__item">
+									<div id="figureWrapper2" class="figure-container accordion__header">
+										<div class="figure">
+											<div class="figure-block" style="background-image: url(img/why-choose-us/image-2.jpg);"></div>
+										</div>
+									</div>
+
+
+									<div class="advantage-two-content accordion__body">
+										<div class="accordion__content">
+											<p class="advantage-two-content__title">
+												Огромный ассортимент растений
+											</p>
+											<p class="advantage-two-content__text">
+												Включает тысячи видов деревьев, кустарников,
+												цветов и декоративных растений. Акцент на
+												редкие сорта, устойчивые
+												к климату России.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="why-choose-us__advantage-two advantage-two-3 accordion__item">
+									<div id="figureWrapper3" class="figure-container accordion__header">
+										<div class="figure">
+											<div class="figure-block" style="background-image: url(img/why-choose-us/image-3.jpg);"></div>
+										</div>
+									</div>
+
+									<div class="advantage-two-content accordion__body">
+
+										<div class="accordion__content">
+											<p class="advantage-two-content__title">
+												Соблюдение мировых стандартов качества
+											</p>
+											<p class="advantage-two-content__text">
+												В питомнике «Суланж»
+												мы строго придерживаемся
+												международных стандартов ISO, чтобы гарантировать клиентам безупречное качество растений.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="why-choose-us__advantage-two advantage-two-4 accordion__item">
+									<div id="figureWrapper4" class="figure-container accordion__header">
+										<div class="figure">
+											<div class="figure-block" style="background-image: url(img/why-choose-us/image-4.jpg);"></div>
+										</div>
+									</div>
+
+									<div class="advantage-two-content accordion__body">
+										<div class="accordion__content">
+											<p class="advantage-two-content__title">
+												Площадь осваиваемых<br> земель
+											</p>
+											<p class="advantage-two-content__text">
+												Питомник «Суланж» занимает 700 гектаров
+												плодородных земель,
+												что делает его крупнейшим
+												в России проектом
+												по производству посадочного материала.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sales-office section" id="sales-office">
+			<div class="section__scale">
+				<div class="container">
+					<div class="sales-office__block-wrapper">
+						<div class="sales-office__block">
+							<div class="sales-office__image-one">
+								<div class="image">
+									<img src="img/sales-office/image-1.jpg" alt="Изображение">
+								</div>
+							</div>
+
+							<div class="sales-office__image-two">
+								<div class="image">
+									<img src="img/sales-office/image-2.jpg" alt="Изображение">
+								</div>
+							</div>
+
+							<div class="sales-office__image-three">
+								<div class="image">
+									<img src="img/sales-office/image-3.jpg" alt="Изображение">
+								</div>
+							</div>
+
+							<div class="sales-office__video">
+								<div class="video-block">
+									<div class="video-block__wrapper">
+										<video class="video-block__video" id="fon">
+											<source src="files/video/1108227_1080p_Pines_Valley_1280x720.mp4" type="video/mp4">
+										</video>
+										<div class="btn-ok active">
+											<div class="btn-ok__button">
+												<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<circle cx="45" cy="45" r="45" fill="#F04C23" />
+													<path d="M36.3008 62.7728V27.2266L58.9899 44.8126L36.3008 62.7728Z" fill="white" />
+												</svg>
+											</div>
+										</div>
+										<div class="btn-stop">
+											<div class="btn-stop__button">
+												<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<circle cx="45" cy="45" r="45" fill="#F04C23" />
+													<path d="M38 28V62.5H28V28H38Z" fill="white" />
+													<path d="M61.5 28V62.5H51.5V28H61.5Z" fill="white" />
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="sales-office__block-logo">
+								<div class="sales-office__block-logo-wrapper">
+									<div class="sales-office__block-logo-icon">
+										<div class="icon">
+											<img src="img/sales-office/logo-icon.svg" alt="Иконка">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="sales-office__center">
+								<div class="sales-office__center-image">
+									<div class="image-background">
+										<img src="img/sales-office/background.svg" alt="Фон">
+									</div>
+								</div>
+								<h2 class="sales-office__title">Офис<br> продаж</h2>
+							</div>
+						</div>
+					</div>
+
+					<!-- Эта часть для мобильной версии -->
+					<div class="sales-office__block-wrapper-mob">
+						<div class="sales-office__block-wrapper-mob__text">
+							<p>
+								Офис продаж на воде площадью 250 кв м, с верандами и террасой на крыше – уникальное место встречи с
+								гостями питомника. Он окружён водоёмом в виде сердца, который символизирует наше стремление к жизни и
+								развитию. Этот резервуар качает воду для орошения всего питомника.
+							</p>
+						</div>
+						<div class="sales-office__block-wrapper-mob__image">
+							<div class="image">
+								<img src="img/sales-office/image-3.jpg" alt="Изображение">
+							</div>
+						</div>
+					</div>
+					<!-- end -->
+
+				</div>
+			</div>
+		</section>
+
+		<section class="sales-office-sec section">
+			<div class="container">
+				<div class="sales-office-sec__block">
+					<div class="sales-office__text-one text">
+						<p>
+							Офис продаж на воде площадью 250 кв м, с верандами и террасой на крыше – уникальное место встречи с
+							гостями питомника. Он окружён водоёмом в виде сердца, который символизирует наше стремление к жизни и
+							развитию. Этот резервуар качает воду для орошения всего питомника.
+						</p>
+					</div>
+				</div>
+				<div class="sales-office-contact">
+					<div class="sales-office-contact-block">
+						<div class="sales-office-contact-block__background-two-icon">
+							<div class="icon">
+								<img src="img/sales-office/background-two.svg" alt="Иконка">
+							</div>
+						</div>
+
+						<div class="sales-office-contact-block__image">
+							<div class="image">
+								<img src="img/sales-office/image-4.jpg" alt="Изображение">
+							</div>
+						</div>
+
+						<div class="sales-office-contact-block__info">
+							<div class="sales-office-contact-block__text text">
+								<p>
+									Вы почувствуете уровень нашего сервиса как только здесь окажетесь. Продумываем каждую деталь для
+									комфорта и удобства посетителей.
+								</p>
+							</div>
+
+							<div class="sales-office-contact-block__contacts">
+								<div class="sales-office-contact-block__item">
+									<a href="tel:+74954457777" class="phone">+7 (495) 445-77-77</a>
+								</div>
+								<div class="sales-office-contact-block__item">
+									<a href="mailto:info@soulange.ru" class="email">info@soulange.ru</a>
+								</div>
+								<div class="sales-office-contact-block__item">
+									<a href="##" class="btn-1">Контакты</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="vehicle-park section" id="vehicle-park">
+			<div class="section__scale">
+				<div class="container">
+					<div class="vehicle-park-block">
+						<div class="vehicle-park-block__pattern-one">
+							<div class="pattern">
+								<img src="img/vehicle-park/pattern-1.svg" alt="Паттерн">
+							</div>
+						</div>
+
+						<div class="vehicle-park-block__pattern-two">
+							<div class="pattern">
+								<img src="img/vehicle-park/pattern-2.svg" alt="Паттерн">
+							</div>
+						</div>
+
+						<div class="vehicle-park-block__image">
+							<div class="image">
+								<img src="img/vehicle-park/image.png" alt="Изображение">
+							</div>
+						</div>
+
+						<div class="vehicle-park-block__text text">
+							<h3 class="vehicle-park-block__title section-title">Собственный<br> парк спецтехники</h3>
+							<p>
+								В питомнике «Суланж» мы используем
+								современную специализированную технику,
+								которая обеспечивает высокую
+								эффективность и точность на всех этапах
+								производства растений.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer style="display: none" class="footer section">
+		<div class="container">
+			<div class="footer-block">
+				<a class="footer-block__logo">
+					<div class="icon">
+						<img src="img/footer/footer-logo.svg" alt="Логотип">
+					</div>
+				</a>
+				<div class="footer-block__navigation">
+					<ul>
+						<li>
+							<a href="##">О компании</a>
+						</li>
+						<li>
+							<a href="##">Новости</a>
+						</li>
+						<li>
+							<a href="##">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-block__policy">
+					<a href="##" class="footer-block__policy-link">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
