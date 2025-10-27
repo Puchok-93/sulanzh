@@ -1,4 +1,5 @@
 /* Код на запуск видео и открытие этого видео в popup окне */
+function initVideoPopup() {
 const buttonVideoPopupOpen = document.querySelector('.button-video-popup-open');
 const btnOkPopup = document.querySelector('.btn-ok-popup');
 const btnStopPopup = document.querySelector('.btn-stop-popup');
@@ -66,6 +67,8 @@ if (salesOffice && btnOk && btnStop && wrapperVideo) {
 		salesOffice.classList.toggle('left');
 	});
 }
+
+}
 /* end */
 
 
@@ -128,8 +131,33 @@ function initHeaderState() {
 	})
 }
 
+function initNavigation() {
+	const navItems = document.querySelectorAll('.navigation-item');
+	const indicator = document.querySelector('.indicator');
+
+	function moveIndicator(element) {
+		const offsetTop = element.offsetTop;
+		indicator.style.transform = `translateY(${offsetTop}px)`;
+	}
+
+	navItems.forEach(item => {
+    item.addEventListener('click', e => {
+		navItems.forEach(i => i.classList.remove('active'));
+		item.classList.add('active');
+		moveIndicator(item);
+		});
+	});
+
+	window.addEventListener('load', () => {
+		const activeItem = document.querySelector('.navigation-item.active');
+		moveIndicator(activeItem);
+	});
+}
+
 function initApp() {
     initHeaderState();
+	initNavigation();
+	initVideoPopup();
 }
 
 window.addEventListener('DOMContentLoaded', initApp);
