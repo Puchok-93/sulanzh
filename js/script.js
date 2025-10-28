@@ -1,78 +1,3 @@
-/* Код на запуск видео и открытие этого видео в popup окне */
-function initVideoPopup() {
-const buttonVideoPopupOpen = document.querySelector('.button-video-popup-open');
-const btnOkPopup = document.querySelector('.btn-ok-popup');
-const btnStopPopup = document.querySelector('.btn-stop-popup');
-const wrapperVideoPopup = document.getElementById('fon-popup');
-const videoPopup = document.querySelector('.why-choose-us__video-popup');
-const popupVideoClose = document.querySelector('.popup-video-close');
-
-if (buttonVideoPopupOpen && wrapperVideoPopup && btnStopPopup && videoPopup) {
-	buttonVideoPopupOpen.addEventListener('click', function () {
-		if (typeof wrapperVideoPopup.play === 'function') {
-			wrapperVideoPopup.play();
-		}
-		btnStopPopup.classList.add('active');
-		videoPopup.classList.toggle('video-popup-active');
-	});
-}
-if (btnStopPopup && wrapperVideoPopup && btnOkPopup) {
-	btnStopPopup.addEventListener('click', function () {
-		if (typeof wrapperVideoPopup.pause === 'function') {
-			wrapperVideoPopup.pause();
-		}
-		btnOkPopup.classList.toggle('active');
-		btnStopPopup.classList.toggle('active');
-	});
-}
-if (btnOkPopup && wrapperVideoPopup && btnStopPopup) {
-	btnOkPopup.addEventListener('click', function () {
-		if (typeof wrapperVideoPopup.play === 'function') {
-			wrapperVideoPopup.play();
-		}
-		btnOkPopup.classList.toggle('active');
-		btnStopPopup.classList.toggle('active');
-	});
-}
-if (popupVideoClose && wrapperVideoPopup && btnOkPopup && btnStopPopup && videoPopup) {
-	popupVideoClose.addEventListener('click', function () {
-		if (typeof wrapperVideoPopup.pause === 'function') {
-			wrapperVideoPopup.pause();
-		}
-		btnOkPopup.classList.remove('active');
-		btnStopPopup.classList.remove('active');
-		videoPopup.classList.remove('video-popup-active');
-	});
-}
-/* end */
-
-/* Запуск видео в блоке отделы продаж*/
-const salesOffice = document.querySelector('.sales-office');
-const btnOk = document.querySelector('.btn-ok');
-const btnStop = document.querySelector('.btn-stop');
-const wrapperVideo = document.getElementById('fon');
-
-if (salesOffice && btnOk && btnStop && wrapperVideo) {
-	btnOk.addEventListener('click', function () {
-		wrapperVideo.play();
-		btnStop.classList.toggle('active');
-		btnOk.classList.toggle('active');
-		salesOffice.classList.toggle('left');
-	});
-
-	btnStop.addEventListener('click', function () {
-		wrapperVideo.pause();
-		btnOk.classList.toggle('active');
-		btnStop.classList.toggle('active');
-		salesOffice.classList.toggle('left');
-	});
-}
-
-}
-/* end */
-
-
-/* Открытие навигации при клике */
 function initHeaderState() {
     const headerBlock = document.querySelector('.header-block');
     const headerContent = document.querySelector('.header-content');
@@ -81,8 +6,6 @@ function initHeaderState() {
     const headerSubNavCloseBtn = document.querySelector('.header-sub-nav__close-btn');
 
     if (!headerBlock || !headerNavBtn) return;
-
-	console.log(headerBlock.offsetWidth)
 
     const handleScroll = () => {
         if (window.scrollY > 0 && window.innerWidth > 1024) {
@@ -154,6 +77,46 @@ function initNavigation() {
 	});
 }
 
+function initVideoPopup() {
+	const overlay = document.querySelector('.overlay');
+	const popup = document.querySelector('.popup');
+	const openVideoPopupBtn = document.querySelector('.btn-video-play');
+	const closeVideoPopupBtn = document.querySelector('.overlay-close-btn');
+	const video = document.getElementById('promo-sulanzh');
+
+	function openVideoPopup() {
+		overlay.classList.add('fadeIn');
+		overlay.classList.remove('fadeOut');
+		popup.classList.add('slideInDown');
+		popup.classList.remove('slideOutUp');
+		video.play();
+	}
+
+	function closeVideoPopup() {
+		overlay.classList.add('fadeOut');
+		overlay.classList.remove('fadeIn');
+		popup.classList.remove('slideInDown');
+		popup.classList.add('slideOutUp');
+		video.pause();
+	}
+	
+	openVideoPopupBtn.addEventListener('click', openVideoPopup);
+	closeVideoPopupBtn.addEventListener('click', closeVideoPopup);
+
+	overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeVideoPopup();
+        }
+    });
+
+    // Закрытие по нажатию на Esc
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Escape' && overlay.classList.contains('fadeIn')) {
+            closeVideoPopup();
+        }
+    });
+}
+
 function initApp() {
     initHeaderState();
 	initNavigation();
@@ -161,6 +124,80 @@ function initApp() {
 }
 
 window.addEventListener('DOMContentLoaded', initApp);
+
+
+/* Код на запуск видео и открытие этого видео в popup окне */
+// const buttonVideoPopupOpen = document.querySelector('.button-video-popup-open');
+// const btnOkPopup = document.querySelector('.btn-ok-popup');
+// const btnStopPopup = document.querySelector('.btn-stop-popup');
+// const wrapperVideoPopup = document.getElementById('fon-popup');
+// const videoPopup = document.querySelector('.why-choose-us__video-popup');
+// const popupVideoClose = document.querySelector('.popup-video-close');
+
+// if (buttonVideoPopupOpen && wrapperVideoPopup && btnStopPopup && videoPopup) {
+// 	buttonVideoPopupOpen.addEventListener('click', function () {
+// 		if (typeof wrapperVideoPopup.play === 'function') {
+// 			wrapperVideoPopup.play();
+// 		}
+// 		btnStopPopup.classList.add('active');
+// 		videoPopup.classList.toggle('video-popup-active');
+// 	});
+// }
+// if (btnStopPopup && wrapperVideoPopup && btnOkPopup) {
+// 	btnStopPopup.addEventListener('click', function () {
+// 		if (typeof wrapperVideoPopup.pause === 'function') {
+// 			wrapperVideoPopup.pause();
+// 		}
+// 		btnOkPopup.classList.toggle('active');
+// 		btnStopPopup.classList.toggle('active');
+// 	});
+// }
+// if (btnOkPopup && wrapperVideoPopup && btnStopPopup) {
+// 	btnOkPopup.addEventListener('click', function () {
+// 		if (typeof wrapperVideoPopup.play === 'function') {
+// 			wrapperVideoPopup.play();
+// 		}
+// 		btnOkPopup.classList.toggle('active');
+// 		btnStopPopup.classList.toggle('active');
+// 	});
+// }
+// if (popupVideoClose && wrapperVideoPopup && btnOkPopup && btnStopPopup && videoPopup) {
+// 	popupVideoClose.addEventListener('click', function () {
+// 		if (typeof wrapperVideoPopup.pause === 'function') {
+// 			wrapperVideoPopup.pause();
+// 		}
+// 		btnOkPopup.classList.remove('active');
+// 		btnStopPopup.classList.remove('active');
+// 		videoPopup.classList.remove('video-popup-active');
+// 	});
+// }
+
+/* end */
+
+/* Запуск видео в блоке отделы продаж*/
+// const salesOffice = document.querySelector('.sales-office');
+// const btnOk = document.querySelector('.btn-ok');
+// const btnStop = document.querySelector('.btn-stop');
+// const wrapperVideo = document.getElementById('fon');
+
+// if (salesOffice && btnOk && btnStop && wrapperVideo) {
+// 	btnOk.addEventListener('click', function () {
+// 		wrapperVideo.play();
+// 		btnStop.classList.toggle('active');
+// 		btnOk.classList.toggle('active');
+// 		salesOffice.classList.toggle('left');
+// 	});
+
+// 	btnStop.addEventListener('click', function () {
+// 		wrapperVideo.pause();
+// 		btnOk.classList.toggle('active');
+// 		btnStop.classList.toggle('active');
+// 		salesOffice.classList.toggle('left');
+// 	});
+// }
+
+// }
+/* end */
 
 /* end */
 

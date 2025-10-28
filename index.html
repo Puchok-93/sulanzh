@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Суланж</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main-block.css">
+	<link rel="stylesheet" href="css/nav.css">
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
@@ -116,7 +118,7 @@
 	</header>
 
 	<main>
-		<div  class="navigation-links">
+		<div class="navigation-links">
 			<div class="indicator"></div>
 			<div class="navigation-item active">
 				<div class="navigation-item__link">
@@ -396,6 +398,23 @@
 				</article>
 			</div>
 		</section>
+
+
+		<!-- Video -->
+		<div class="overlay">
+			<button class="overlay-close-btn" type="button">
+				<svg class="overlay-close-btn__icon" viewBox="0 0 24 24" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L23 23M23 1L1 23" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+						stroke-linejoin="round"></path>
+				</svg>
+			</button>
+			<div class="popup">
+				<video id="promo-sulanzh" class="popup-video" controls>
+					<source src="files/video/1108227_1080p_Pines_Valley_1280x720.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
 	</main>
 
 	<footer class="footer section">
